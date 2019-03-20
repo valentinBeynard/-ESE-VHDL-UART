@@ -1,0 +1,8 @@
+V3 3
+FL C:/Users/BEYNARD/Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd 2019/03/20.17:45:29 P.20131013
+EN work/rx_uart 1553100334 \
+      FL C:/Users/BEYNARD/Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/rx_uart/Behavioral 1553100335 \
+      FL C:/Users/BEYNARD/Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd \
+      EN work/rx_uart 1553100334

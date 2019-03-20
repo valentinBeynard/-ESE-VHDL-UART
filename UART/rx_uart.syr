@@ -1,0 +1,528 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: rx_uart.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "rx_uart.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "rx_uart"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : rx_uart
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/BEYNARD/Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd" in Library work.
+Entity <rx_uart> compiled.
+Entity <rx_uart> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <rx_uart> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <rx_uart> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/BEYNARD/Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd" line 66: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <current_state>, <rx>, <internal_dout>
+Entity <rx_uart> analyzed. Unit <rx_uart> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <rx_uart>.
+    Related source file is "C:/Users/BEYNARD/Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <internal_dout_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <internal_dout_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <internal_dout_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <internal_dout_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <internal_dout_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <internal_dout_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <internal_dout_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <internal_dout_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Using one-hot encoding for signal <current_state>.
+WARNING:Xst:737 - Found 4-bit latch for signal <next_state>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 3-bit latch for signal <n>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 4-bit latch for signal <s>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 8-bit latch for signal <dout>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 4-bit register for signal <current_state>.
+    Found 4-bit comparator greatequal for signal <internal_dout_0$cmp_ge0000> created at line 138.
+    Found 3-bit adder for signal <n$addsub0000> created at line 141.
+    Found 4-bit comparator less for signal <n$cmp_lt0000> created at line 138.
+    Found 4-bit comparator less for signal <next_state$cmp_lt0000> created at line 107.
+    Found 4-bit adder for signal <s$add0000> created at line 90.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <rx_uart> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 1
+ 4-bit register                                        : 1
+# Latches                                              : 12
+ 1-bit latch                                           : 8
+ 3-bit latch                                           : 1
+ 4-bit latch                                           : 2
+ 8-bit latch                                           : 1
+# Comparators                                          : 3
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator less                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Latches                                              : 12
+ 1-bit latch                                           : 8
+ 3-bit latch                                           : 1
+ 4-bit latch                                           : 2
+ 8-bit latch                                           : 1
+# Comparators                                          : 3
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator less                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <rx_uart> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block rx_uart, actual ratio is 1.
+FlipFlop current_state_1 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : rx_uart.ngr
+Top Level Output File Name         : rx_uart
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 50
+#      LUT2                        : 5
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 17
+#      LUT3_L                      : 3
+#      LUT4                        : 20
+#      LUT4_D                      : 1
+#      LUT4_L                      : 2
+# FlipFlops/Latches                : 32
+#      FDC                         : 4
+#      FDP                         : 1
+#      LD                          : 19
+#      LDE                         : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 3
+#      OBUF                        : 9
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       27  out of   1920     1%  
+ Number of Slice Flip Flops:             23  out of   3840     0%  
+ Number of 4 input LUTs:                 50  out of   3840     1%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    173     7%  
+    IOB Flip Flops:                       9
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------+-------------------------+-------+
+Clock Signal                                             | Clock buffer(FF name)   | Load  |
+---------------------------------------------------------+-------------------------+-------+
+internal_dout_0_cmp_ge0000(internal_dout_0_cmp_ge00001:O)| NONE(*)(internal_dout_7)| 8     |
+s_not0001(s_not00011:O)                                  | NONE(*)(s_0)            | 4     |
+n_not0001(n_not00011:O)                                  | NONE(*)(n_0)            | 3     |
+next_state_not0001(next_state_not00012:O)                | NONE(*)(next_state_0)   | 4     |
+clk                                                      | BUFGP                   | 5     |
+dout_or0000(dout_or00001:O)                              | NONE(*)(dout_0)         | 8     |
+---------------------------------------------------------+-------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 5     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.953ns (Maximum Frequency: 167.983MHz)
+   Minimum input arrival time before clock: 6.105ns
+   Maximum output required time after clock: 7.165ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'internal_dout_0_cmp_ge0000'
+  Clock period: 3.166ns (frequency: 315.856MHz)
+  Total number of paths / destination ports: 10 / 8
+-------------------------------------------------------------------------
+Delay:               3.166ns (Levels of Logic = 2)
+  Source:            internal_dout_4 (LATCH)
+  Destination:       internal_dout_4 (LATCH)
+  Source Clock:      internal_dout_0_cmp_ge0000 falling
+  Destination Clock: internal_dout_0_cmp_ge0000 falling
+
+  Data Path: internal_dout_4 to internal_dout_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              3   0.633   1.102  internal_dout_4 (internal_dout_4)
+     LUT3_L:I1->LO         1   0.551   0.126  internal_dout_4_mux0001_SW0 (N14)
+     LUT4:I3->O            1   0.551   0.000  internal_dout_4_mux0001 (internal_dout_4_mux0001)
+     LDE:D                     0.203          internal_dout_4
+    ----------------------------------------
+    Total                      3.166ns (1.938ns logic, 1.228ns route)
+                                       (61.2% logic, 38.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 's_not0001'
+  Clock period: 5.953ns (frequency: 167.983MHz)
+  Total number of paths / destination ports: 51 / 4
+-------------------------------------------------------------------------
+Delay:               5.953ns (Levels of Logic = 3)
+  Source:            s_2 (LATCH)
+  Destination:       s_0 (LATCH)
+  Source Clock:      s_not0001 falling
+  Destination Clock: s_not0001 falling
+
+  Data Path: s_2 to s_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               7   0.633   1.261  s_2 (s_2)
+     LUT4:I1->O           15   0.551   1.256  internal_dout_0_cmp_ge00001 (internal_dout_0_cmp_ge0000)
+     LUT3:I2->O            5   0.551   0.947  s_mux0003<0>21 (N11)
+     LUT4:I3->O            1   0.551   0.000  s_mux0003<0> (s_mux0003<0>)
+     LD:D                      0.203          s_0
+    ----------------------------------------
+    Total                      5.953ns (2.489ns logic, 3.464ns route)
+                                       (41.8% logic, 58.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'n_not0001'
+  Clock period: 3.782ns (frequency: 264.410MHz)
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Delay:               3.782ns (Levels of Logic = 2)
+  Source:            n_0 (LATCH)
+  Destination:       n_2 (LATCH)
+  Source Clock:      n_not0001 falling
+  Destination Clock: n_not0001 falling
+
+  Data Path: n_0 to n_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               7   0.633   1.405  n_0 (n_0)
+     LUT2_D:I0->LO         1   0.551   0.439  internal_dout_3_cmp_eq000011 (N26)
+     LUT4:I0->O            1   0.551   0.000  n_mux0000<2>1 (n_mux0000<2>)
+     LD:D                      0.203          n_2
+    ----------------------------------------
+    Total                      3.782ns (1.938ns logic, 1.844ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'internal_dout_0_cmp_ge0000'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.565ns (Levels of Logic = 3)
+  Source:            rx (PAD)
+  Destination:       internal_dout_0 (LATCH)
+  Destination Clock: internal_dout_0_cmp_ge0000 falling
+
+  Data Path: rx to internal_dout_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.821   1.313  rx_IBUF (rx_IBUF)
+     LUT3_L:I1->LO         1   0.551   0.126  internal_dout_0_mux0001_SW0 (N16)
+     LUT4:I3->O            1   0.551   0.000  internal_dout_0_mux0001 (internal_dout_0_mux0001)
+     LDE:D                     0.203          internal_dout_0
+    ----------------------------------------
+    Total                      3.565ns (2.126ns logic, 1.439ns route)
+                                       (59.6% logic, 40.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 's_not0001'
+  Total number of paths / destination ports: 12 / 4
+-------------------------------------------------------------------------
+Offset:              6.105ns (Levels of Logic = 4)
+  Source:            rx (PAD)
+  Destination:       s_1 (LATCH)
+  Destination Clock: s_not0001 falling
+
+  Data Path: rx to s_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.821   1.457  rx_IBUF (rx_IBUF)
+     LUT2:I0->O            1   0.551   0.996  next_state_not000111_SW0 (N20)
+     LUT4_D:I1->O          3   0.551   0.975  s_mux0003<0>_SW0 (s_mux0003<1>44)
+     LUT4:I2->O            1   0.551   0.000  s_mux0003<2>59 (s_mux0003<2>)
+     LD:D                      0.203          s_2
+    ----------------------------------------
+    Total                      6.105ns (2.677ns logic, 3.428ns route)
+                                       (43.8% logic, 56.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'next_state_not0001'
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Offset:              4.723ns (Levels of Logic = 3)
+  Source:            rx (PAD)
+  Destination:       next_state_0 (LATCH)
+  Destination Clock: next_state_not0001 falling
+
+  Data Path: rx to next_state_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.821   1.457  rx_IBUF (rx_IBUF)
+     LUT4:I0->O            1   0.551   1.140  next_state_mux0004<0>_SW0 (N12)
+     LUT4:I0->O            1   0.551   0.000  next_state_mux0004<0> (next_state_mux0004<0>)
+     LD:D                      0.203          next_state_0
+    ----------------------------------------
+    Total                      4.723ns (2.126ns logic, 2.597ns route)
+                                       (45.0% logic, 55.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.165ns (Levels of Logic = 1)
+  Source:            current_state_1_1 (FF)
+  Destination:       rx_done (PAD)
+  Source Clock:      clk rising
+
+  Data Path: current_state_1_1 to rx_done
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.720   0.801  current_state_1_1 (current_state_1_1)
+     OBUF:I->O                 5.644          rx_done_OBUF (rx_done)
+    ----------------------------------------
+    Total                      7.165ns (6.364ns logic, 0.801ns route)
+                                       (88.8% logic, 11.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dout_or0000'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              7.078ns (Levels of Logic = 1)
+  Source:            dout_7 (LATCH)
+  Destination:       dout<7> (PAD)
+  Source Clock:      dout_or0000 falling
+
+  Data Path: dout_7 to dout<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.633   0.801  dout_7 (dout_7)
+     OBUF:I->O                 5.644          dout_7_OBUF (dout<7>)
+    ----------------------------------------
+    Total                      7.078ns (6.277ns logic, 0.801ns route)
+                                       (88.7% logic, 11.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.94 secs
+ 
+--> 
+
+Total memory usage is 4534820 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+
