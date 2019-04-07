@@ -1,4 +1,4 @@
-Release 14.6 - xst P.68d (nt64)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
@@ -104,7 +104,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/CPE_USERS/TPelec_4ETI/UART/tx_uart.vhd" in Library work.
+Compiling vhdl file "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/tx_uart.vhd" in Library work.
 Entity <tx_uart> compiled.
 Entity <tx_uart> (Architecture <behavioral>) compiled.
 
@@ -118,8 +118,8 @@ Analyzing hierarchy for entity <tx_uart> in library <work> (architecture <behavi
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <tx_uart> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/CPE_USERS/TPelec_4ETI/UART/tx_uart.vhd" line 69: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <s_reg>, <n_reg>, <current_state>, <tx_start>
+WARNING:Xst:819 - "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/tx_uart.vhd" line 69: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <tx_start>
 Entity <tx_uart> analyzed. Unit <tx_uart> generated.
 
 
@@ -130,27 +130,31 @@ Entity <tx_uart> analyzed. Unit <tx_uart> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <tx_uart>.
-    Related source file is "C:/CPE_USERS/TPelec_4ETI/UART/tx_uart.vhd".
-    Using one-hot encoding for signal <current_state>.
-WARNING:Xst:737 - Found 4-bit latch for signal <next_state>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <tx>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 4-bit register for signal <current_state>.
+    Related source file is "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/tx_uart.vhd".
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
     Found 4-bit register for signal <n_reg>.
-    Found 4-bit adder for signal <n_reg$addsub0000> created at line 144.
-    Found 4-bit comparator greatequal for signal <next_state$cmp_ge0000> created at line 97.
-    Found 4-bit comparator greater for signal <next_state$cmp_gt0000> created at line 134.
-    Found 4-bit comparator less for signal <next_state$cmp_lt0000> created at line 111.
+    Found 4-bit adder for signal <n_reg$addsub0000> created at line 114.
+    Found 4-bit adder for signal <s$add0000> created at line 95.
     Found 4-bit register for signal <s_reg>.
-    Found 4-bit adder for signal <s_reg$share0000> created at line 80.
     Summary:
+	inferred   1 Finite State Machine(s).
 	inferred   8 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred   3 Comparator(s).
 Unit <tx_uart> synthesized.
 
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
@@ -158,15 +162,8 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 2
  4-bit adder                                           : 2
-# Registers                                            : 3
- 4-bit register                                        : 3
-# Latches                                              : 2
- 1-bit latch                                           : 1
- 4-bit latch                                           : 1
-# Comparators                                          : 3
- 4-bit comparator greatequal                           : 1
- 4-bit comparator greater                              : 1
- 4-bit comparator less                                 : 1
+# Registers                                            : 2
+ 4-bit register                                        : 2
 
 =========================================================================
 
@@ -174,22 +171,26 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <current_state/FSM> on signal <current_state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ idle  | 00
+ start | 01
+ data  | 11
+ stop  | 10
+-------------------
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# FSMs                                                 : 1
 # Adders/Subtractors                                   : 2
  4-bit adder                                           : 2
-# Registers                                            : 12
- Flip-Flops                                            : 12
-# Latches                                              : 2
- 1-bit latch                                           : 1
- 4-bit latch                                           : 1
-# Comparators                                          : 3
- 4-bit comparator greatequal                           : 1
- 4-bit comparator greater                              : 1
- 4-bit comparator less                                 : 1
+# Registers                                            : 8
+ Flip-Flops                                            : 8
 
 =========================================================================
 
@@ -198,11 +199,12 @@ Macro Statistics
 =========================================================================
 
 Optimizing unit <tx_uart> ...
+WARNING:Xst:1293 - FF/Latch <n_reg_3> has a constant value of 0 in block <tx_uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <n_reg_3> has a constant value of 0 in block <tx_uart>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block tx_uart, actual ratio is 1.
-FlipFlop current_state_1 has been replicated 1 time(s) to handle iob=true attribute.
+Found area constraint ratio of 100 (+ 5) on block tx_uart, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -210,8 +212,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 13
- Flip-Flops                                            : 13
+# Registers                                            : 9
+ Flip-Flops                                            : 9
 
 =========================================================================
 
@@ -240,18 +242,16 @@ Design Statistics
 # IOs                              : 14
 
 Cell Usage :
-# BELS                             : 51
-#      GND                         : 1
-#      LUT2                        : 6
-#      LUT3                        : 6
-#      LUT3_L                      : 2
-#      LUT4                        : 23
-#      LUT4_D                      : 2
-#      MUXF5                       : 11
-# FlipFlops/Latches                : 18
-#      FDC                         : 12
-#      FDP                         : 1
-#      LD                          : 5
+# BELS                             : 30
+#      LUT2                        : 2
+#      LUT2_L                      : 2
+#      LUT3                        : 5
+#      LUT3_L                      : 1
+#      LUT4                        : 15
+#      LUT4_L                      : 2
+#      MUXF5                       : 3
+# FlipFlops/Latches                : 9
+#      FDC                         : 9
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 13
@@ -264,12 +264,11 @@ Device utilization summary:
 
 Selected Device : 3s200ft256-4 
 
- Number of Slices:                       21  out of   1920     1%  
- Number of Slice Flip Flops:             16  out of   3840     0%  
- Number of 4 input LUTs:                 39  out of   3840     1%  
+ Number of Slices:                       14  out of   1920     0%  
+ Number of Slice Flip Flops:              9  out of   3840     0%  
+ Number of 4 input LUTs:                 27  out of   3840     0%  
  Number of IOs:                          14
  Number of bonded IOBs:                  14  out of    173     8%  
-    IOB Flip Flops:                       2
  Number of GCLKs:                         1  out of      8    12%  
 
 ---------------------------
@@ -290,34 +289,28 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------+------------------------+-------+
-Clock Signal                               | Clock buffer(FF name)  | Load  |
--------------------------------------------+------------------------+-------+
-clk                                        | BUFGP                  | 13    |
-tx_not0001(tx_not00011:O)                  | NONE(*)(tx)            | 1     |
-next_state_not0001(next_state_not0001_f5:O)| NONE(*)(next_state_0)  | 4     |
--------------------------------------------+------------------------+-------+
-(*) These 2 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 9     |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-rst                                | IBUF                   | 13    |
+rst                                | IBUF                   | 9     |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 5.933ns (Maximum Frequency: 168.549MHz)
-   Minimum input arrival time before clock: 6.179ns
-   Maximum output required time after clock: 7.165ns
-   Maximum combinational path delay: No path found
+   Minimum period: 5.546ns (Maximum Frequency: 180.310MHz)
+   Minimum input arrival time before clock: 5.831ns
+   Maximum output required time after clock: 11.086ns
+   Maximum combinational path delay: 10.593ns
 
 Timing Detail:
 --------------
@@ -325,143 +318,104 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.933ns (frequency: 168.549MHz)
-  Total number of paths / destination ports: 123 / 8
+  Clock period: 5.546ns (frequency: 180.310MHz)
+  Total number of paths / destination ports: 67 / 9
 -------------------------------------------------------------------------
-Delay:               5.933ns (Levels of Logic = 3)
-  Source:            s_reg_3 (FF)
-  Destination:       s_reg_2 (FF)
+Delay:               5.546ns (Levels of Logic = 3)
+  Source:            s_reg_2 (FF)
+  Destination:       current_state_FSM_FFd2 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: s_reg_3 to s_reg_2
+  Data Path: s_reg_2 to current_state_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              2   0.720   1.216  s_reg_3 (s_reg_3)
-     LUT4:I0->O           13   0.551   1.196  next_state_cmp_ge00001 (next_state_cmp_ge0000)
-     LUT4_D:I3->O          2   0.551   0.945  s_reg_mux0000<0>3 (N25)
-     LUT4:I2->O            1   0.551   0.000  s_reg_mux0000<1>1 (s_reg_mux0000<1>)
-     FDC:D                     0.203          s_reg_2
+     FDC:C->Q              2   0.720   1.072  s_reg_2 (s_reg_2)
+     LUT4:I1->O            6   0.551   1.071  s_reg_mux0000<0>21 (N7)
+     LUT3:I2->O            1   0.551   0.827  current_state_FSM_FFd2-In6 (current_state_FSM_FFd2-In6)
+     LUT4:I3->O            1   0.551   0.000  current_state_FSM_FFd2-In38 (current_state_FSM_FFd2-In)
+     FDC:D                     0.203          current_state_FSM_FFd2
     ----------------------------------------
-    Total                      5.933ns (2.576ns logic, 3.357ns route)
-                                       (43.4% logic, 56.6% route)
+    Total                      5.546ns (2.576ns logic, 2.970ns route)
+                                       (46.4% logic, 53.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 24 / 8
+  Total number of paths / destination ports: 10 / 9
 -------------------------------------------------------------------------
-Offset:              6.179ns (Levels of Logic = 4)
+Offset:              5.831ns (Levels of Logic = 4)
   Source:            s_tick (PAD)
-  Destination:       s_reg_1 (FF)
+  Destination:       current_state_FSM_FFd2 (FF)
   Destination Clock: clk rising
 
-  Data Path: s_tick to s_reg_1
+  Data Path: s_tick to current_state_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            15   0.821   1.527  s_tick_IBUF (s_tick_IBUF)
-     LUT4:I0->O            2   0.551   1.072  s_reg_mux0000<0>4_SW1 (N12)
-     LUT4_D:I1->O          2   0.551   0.903  s_reg_mux0000<0>4 (N26)
-     LUT4:I3->O            1   0.551   0.000  s_reg_mux0000<2>1 (s_reg_mux0000<2>)
-     FDC:D                     0.203          s_reg_1
+     IBUF:I->O             4   0.821   1.256  s_tick_IBUF (s_tick_IBUF)
+     LUT4:I0->O            6   0.551   1.071  s_reg_mux0000<0>21 (N7)
+     LUT3:I2->O            1   0.551   0.827  current_state_FSM_FFd2-In6 (current_state_FSM_FFd2-In6)
+     LUT4:I3->O            1   0.551   0.000  current_state_FSM_FFd2-In38 (current_state_FSM_FFd2-In)
+     FDC:D                     0.203          current_state_FSM_FFd2
     ----------------------------------------
-    Total                      6.179ns (2.677ns logic, 3.502ns route)
-                                       (43.3% logic, 56.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'tx_not0001'
-  Total number of paths / destination ports: 9 / 1
--------------------------------------------------------------------------
-Offset:              5.644ns (Levels of Logic = 5)
-  Source:            din<4> (PAD)
-  Destination:       tx (LATCH)
-  Destination Clock: tx_not0001 falling
-
-  Data Path: din<4> to tx
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   0.821   0.869  din_4_IBUF (din_4_IBUF)
-     LUT4:I2->O            1   0.551   0.000  tx_mux0001100_F (N48)
-     MUXF5:I0->O           1   0.360   0.869  tx_mux0001100 (tx_mux0001100)
-     LUT4:I2->O            1   0.551   0.869  tx_mux0001145_SW0 (N40)
-     LUT4:I2->O            1   0.551   0.000  tx_mux0001145 (tx_mux0001)
-     LD:D                      0.203          tx
-    ----------------------------------------
-    Total                      5.644ns (3.037ns logic, 2.607ns route)
-                                       (53.8% logic, 46.2% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'next_state_not0001'
-  Total number of paths / destination ports: 7 / 4
--------------------------------------------------------------------------
-Offset:              3.277ns (Levels of Logic = 3)
-  Source:            tx_start (PAD)
-  Destination:       next_state_0 (LATCH)
-  Destination Clock: next_state_not0001 falling
-
-  Data Path: tx_start to next_state_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             6   0.821   1.342  tx_start_IBUF (tx_start_IBUF)
-     LUT3:I0->O            1   0.551   0.000  next_state_mux0005<0>_F (N44)
-     MUXF5:I0->O           1   0.360   0.000  next_state_mux0005<0> (next_state_mux0005<0>)
-     LD:D                      0.203          next_state_0
-    ----------------------------------------
-    Total                      3.277ns (1.935ns logic, 1.342ns route)
-                                       (59.0% logic, 41.0% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'tx_not0001'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              7.078ns (Levels of Logic = 1)
-  Source:            tx (LATCH)
-  Destination:       tx (PAD)
-  Source Clock:      tx_not0001 falling
-
-  Data Path: tx to tx
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.633   0.801  tx (tx_OBUF)
-     OBUF:I->O                 5.644          tx_OBUF (tx)
-    ----------------------------------------
-    Total                      7.078ns (6.277ns logic, 0.801ns route)
-                                       (88.7% logic, 11.3% route)
+    Total                      5.831ns (2.677ns logic, 3.154ns route)
+                                       (45.9% logic, 54.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 14 / 2
 -------------------------------------------------------------------------
-Offset:              7.165ns (Levels of Logic = 1)
-  Source:            current_state_1_1 (FF)
-  Destination:       tx_done (PAD)
+Offset:              11.086ns (Levels of Logic = 4)
+  Source:            n_reg_0 (FF)
+  Destination:       tx (PAD)
   Source Clock:      clk rising
 
-  Data Path: current_state_1_1 to tx_done
+  Data Path: n_reg_0 to tx
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              1   0.720   0.801  current_state_1_1 (current_state_1_1)
-     OBUF:I->O                 5.644          tx_done_OBUF (tx_done)
+     FDC:C->Q              9   0.720   1.463  n_reg_0 (n_reg_0)
+     LUT4:I0->O            1   0.551   0.000  tx44_F (N21)
+     MUXF5:I0->O           1   0.360   0.996  tx44 (tx44)
+     LUT4:I1->O            1   0.551   0.801  tx140 (tx_OBUF)
+     OBUF:I->O                 5.644          tx_OBUF (tx)
     ----------------------------------------
-    Total                      7.165ns (6.364ns logic, 0.801ns route)
-                                       (88.8% logic, 11.2% route)
+    Total                     11.086ns (7.826ns logic, 3.260ns route)
+                                       (70.6% logic, 29.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 1
+-------------------------------------------------------------------------
+Delay:               10.593ns (Levels of Logic = 5)
+  Source:            din<5> (PAD)
+  Destination:       tx (PAD)
+
+  Data Path: din<5> to tx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.869  din_5_IBUF (din_5_IBUF)
+     LUT4:I2->O            1   0.551   0.000  tx44_F (N21)
+     MUXF5:I0->O           1   0.360   0.996  tx44 (tx44)
+     LUT4:I1->O            1   0.551   0.801  tx140 (tx_OBUF)
+     OBUF:I->O                 5.644          tx_OBUF (tx)
+    ----------------------------------------
+    Total                     10.593ns (7.927ns logic, 2.666ns route)
+                                       (74.8% logic, 25.2% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.69 secs
+Total CPU time to Xst completion: 3.73 secs
  
 --> 
 
-Total memory usage is 258132 kilobytes
+Total memory usage is 4550260 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

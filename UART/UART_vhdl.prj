@@ -1,3 +1,4 @@
-vhdl work "C:\CPE_USERS\TPelec_4ETI\UART\tx_uart.vhd"
-vhdl work "C:\CPE_USERS\TPelec_4ETI\UART\baud_rate_generator.vhd"
-vhdl work "C:\CPE_USERS\TPelec_4ETI\UART\UART.vhd"
+vhdl work "F:\Mes Documents\GitHub\-ESE-VHDL-UART\UART\tx_uart.vhd"
+vhdl work "F:\Mes Documents\GitHub\-ESE-VHDL-UART\UART\rx_uart.vhd"
+vhdl work "F:\Mes Documents\GitHub\-ESE-VHDL-UART\UART\baud_rate_generator.vhd"
+vhdl work "F:\Mes Documents\GitHub\-ESE-VHDL-UART\UART\UART.vhd"

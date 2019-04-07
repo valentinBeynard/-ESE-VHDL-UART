@@ -89,3 +89,5 @@ xst -intstyle ise -ifn "C:/CPE_USERS/TPelec_4ETI/UART/UART.xst" -ofn "C:/CPE_USE
 xst -intstyle ise -ifn "C:/CPE_USERS/TPelec_4ETI/UART/UART.xst" -ofn "C:/CPE_USERS/TPelec_4ETI/UART/UART.syr" 
 xst -intstyle ise -ifn "C:/CPE_USERS/TPelec_4ETI/UART/UART.xst" -ofn "C:/CPE_USERS/TPelec_4ETI/UART/UART.syr" 
 xst -intstyle ise -ifn "C:/CPE_USERS/TPelec_4ETI/UART/UART.xst" -ofn "C:/CPE_USERS/TPelec_4ETI/UART/UART.syr" 
+xst -intstyle ise -ifn "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/UART.xst" -ofn "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/UART.syr" 
+xst -intstyle ise -ifn "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/UART.xst" -ofn "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/UART.syr" 

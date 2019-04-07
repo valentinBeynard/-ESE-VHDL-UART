@@ -1,23 +1,20 @@
-Running: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/CPE_USERS/TPelec_4ETI/UART/uart_tb_isim_beh.exe -prj C:/CPE_USERS/TPelec_4ETI/UART/uart_tb_beh.prj work.uart_tb 
-ISim P.68d (signature 0x7708f090)
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/tx_uart_tb_isim_beh.exe" -prj "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/tx_uart_tb_beh.prj" "work.tx_uart_tb" 
+ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/CPE_USERS/TPelec_4ETI/UART/tx_uart.vhd" into library work
-Parsing VHDL file "C:/CPE_USERS/TPelec_4ETI/UART/baud_rate_generator.vhd" into library work
-Parsing VHDL file "C:/CPE_USERS/TPelec_4ETI/UART/UART.vhd" into library work
-Parsing VHDL file "C:/CPE_USERS/TPelec_4ETI/UART/uart_tb.vhd" into library work
+Parsing VHDL file "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/tx_uart.vhd" into library work
+Parsing VHDL file "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/tx_uart_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling architecture behavioral of entity baud_rate_generator [baud_rate_generator_default]
 Compiling architecture behavioral of entity tx_uart [tx_uart_default]
-Compiling architecture behavioral of entity UART [uart_default]
-Compiling architecture behavior of entity uart_tb
+Compiling architecture behavior of entity tx_uart_tb
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 9 VHDL Units
-Built simulation executable C:/CPE_USERS/TPelec_4ETI/UART/uart_tb_isim_beh.exe
-Fuse Memory Usage: 30088 KB
-Fuse CPU Usage: 514 ms
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: Le chemin d accès spécifié est introuvable, "isim\tx_uart_tb_isim_beh.exe.sim\libPortability.dll".
+Compiled 5 VHDL Units
+Built simulation executable F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/tx_uart_tb_isim_beh.exe
+Fuse Memory Usage: 28672 KB
+Fuse CPU Usage: 343 ms

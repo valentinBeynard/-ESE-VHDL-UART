@@ -1,8 +1,8 @@
-AR baud_rate_generator behavioral C:/CPE_USERS/TPelec_4ETI/UART/baud_rate_generator.vhd sub00/vhpl05 1553704267
-AR uart behavioral C:/CPE_USERS/TPelec_4ETI/UART/UART.vhd sub00/vhpl07 1553704271
-AR rx_uart behavioral C:/CPE_USERS/-ESE-VHDL-UART-master/UART/rx_uart.vhd sub00/vhpl01 1553612366
-EN baud_rate_generator NULL C:/CPE_USERS/TPelec_4ETI/UART/baud_rate_generator.vhd sub00/vhpl04 1553704266
-EN tx_uart NULL C:/CPE_USERS/TPelec_4ETI/UART/tx_uart.vhd sub00/vhpl02 1553704268
-AR tx_uart behavioral C:/CPE_USERS/TPelec_4ETI/UART/tx_uart.vhd sub00/vhpl03 1553704269
-EN rx_uart NULL C:/CPE_USERS/-ESE-VHDL-UART-master/UART/rx_uart.vhd sub00/vhpl00 1553612365
-EN uart NULL C:/CPE_USERS/TPelec_4ETI/UART/UART.vhd sub00/vhpl06 1553704270
+AR baud_rate_generator behavioral "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/baud_rate_generator.vhd" sub00/vhpl05 1554652986
+AR uart behavioral "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/UART.vhd" sub00/vhpl07 1554652992
+AR rx_uart behavioral "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd" sub00/vhpl01 1554652990
+EN baud_rate_generator NULL "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/baud_rate_generator.vhd" sub00/vhpl04 1554652985
+EN tx_uart NULL "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/tx_uart.vhd" sub00/vhpl02 1554652987
+AR tx_uart behavioral "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/tx_uart.vhd" sub00/vhpl03 1554652988
+EN rx_uart NULL "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd" sub00/vhpl00 1554652989
+EN uart NULL "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/UART.vhd" sub00/vhpl06 1554652991

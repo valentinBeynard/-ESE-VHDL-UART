@@ -1,16 +1,16 @@
-Release 14.6 - xst P.68d (nt64)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: rx_uart.prj
 
@@ -104,9 +104,10 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/CPE_USERS/-ESE-VHDL-UART-master/UART/rx_uart.vhd" in Library work.
-Entity <rx_uart> compiled.
-Entity <rx_uart> (Architecture <behavioral>) compiled.
+WARNING:HDLParsers:3607 - Unit work/rx_uart is now defined in a different file.  It was defined in "C:/CPE_USERS/-ESE-VHDL-UART-master/UART/rx_uart.vhd", and is now defined in "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd".
+WARNING:HDLParsers:3607 - Unit work/rx_uart/Behavioral is now defined in a different file.  It was defined in "C:/CPE_USERS/-ESE-VHDL-UART-master/UART/rx_uart.vhd", and is now defined in "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd".
+Compiling vhdl file "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd" in Library work.
+Architecture behavioral of Entity rx_uart is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -118,7 +119,7 @@ Analyzing hierarchy for entity <rx_uart> in library <work> (architecture <behavi
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <rx_uart> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/CPE_USERS/-ESE-VHDL-UART-master/UART/rx_uart.vhd" line 65: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd" line 65: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <s>, <current_state>, <rx>, <internal_dout>
 Entity <rx_uart> analyzed. Unit <rx_uart> generated.
 
@@ -130,7 +131,7 @@ Entity <rx_uart> analyzed. Unit <rx_uart> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <rx_uart>.
-    Related source file is "C:/CPE_USERS/-ESE-VHDL-UART-master/UART/rx_uart.vhd".
+    Related source file is "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd".
 WARNING:Xst:737 - Found 1-bit latch for signal <internal_dout_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <internal_dout_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <internal_dout_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -542,14 +543,14 @@ Offset:              7.078ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.97 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.93 secs
  
 --> 
 
-Total memory usage is 260244 kilobytes
+Total memory usage is 4550288 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   13 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
 Number of infos    :    5 (   0 filtered)
 

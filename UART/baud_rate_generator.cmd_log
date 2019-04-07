@@ -10,3 +10,4 @@ map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o baud_rat
 par -w -intstyle ise -ol high -t 1 baud_rate_generator_map.ncd baud_rate_generator.ncd baud_rate_generator.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml baud_rate_generator.twx baud_rate_generator.ncd -o baud_rate_generator.twr baud_rate_generator.pcf 
 netgen -intstyle ise -s 4  -pcf baud_rate_generator.pcf -rpw 100 -tpw 0 -ar Structure -tm baud_rate_generator -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim baud_rate_generator.ncd baud_rate_generator_timesim.vhd 
+xst -intstyle ise -ifn "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/baud_rate_generator.xst" -ofn "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/baud_rate_generator.syr" 

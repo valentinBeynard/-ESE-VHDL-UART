@@ -1,16 +1,16 @@
-Release 14.6 - xst P.68d (nt64)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.43 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.44 secs
  
 --> Reading design: baud_rate_generator.prj
 
@@ -104,7 +104,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/CPE_USERS/TPelec_4ETI/UART/baud_rate_generator.vhd" in Library work.
+WARNING:HDLParsers:3607 - Unit work/baud_rate_generator is now defined in a different file.  It was defined in "C:/CPE_USERS/TPelec_4ETI/UART/baud_rate_generator.vhd", and is now defined in "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/baud_rate_generator.vhd".
+WARNING:HDLParsers:3607 - Unit work/baud_rate_generator/Behavioral is now defined in a different file.  It was defined in "C:/CPE_USERS/TPelec_4ETI/UART/baud_rate_generator.vhd", and is now defined in "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/baud_rate_generator.vhd".
+Compiling vhdl file "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/baud_rate_generator.vhd" in Library work.
 Architecture behavioral of Entity baud_rate_generator is up to date.
 
 =========================================================================
@@ -127,7 +129,7 @@ Entity <baud_rate_generator> analyzed. Unit <baud_rate_generator> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <baud_rate_generator>.
-    Related source file is "C:/CPE_USERS/TPelec_4ETI/UART/baud_rate_generator.vhd".
+    Related source file is "F:/Mes Documents/GitHub/-ESE-VHDL-UART/UART/baud_rate_generator.vhd".
 WARNING:Xst:646 - Signal <baud_rate_int> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <seize_baud_rate_int>.
     Found 16-bit comparator equal for signal <seize_baud_rate_int$cmp_eq0000> created at line 83.
@@ -404,13 +406,13 @@ Offset:              7.165ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.32 secs
+Total CPU time to Xst completion: 5.79 secs
  
 --> 
 
-Total memory usage is 256980 kilobytes
+Total memory usage is 4534068 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
