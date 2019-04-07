@@ -1,0 +1,3 @@
+vhdl work "tx_uart.vhd"
+vhdl work "baud_rate_generator.vhd"
+vhdl work "UART.vhd"

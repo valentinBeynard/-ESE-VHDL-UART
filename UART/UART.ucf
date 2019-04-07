@@ -1,0 +1,24 @@
+NET "clk" LOC = T9;
+NET "clk" IOSTANDARD = LVCMOS33;
+
+NET "rst" LOC = M14;
+NET "rst" IOSTANDARD = LVCMOS33;
+
+
+NET "tx" LOC = R13;
+NET "tx" IOSTANDARD = LVCMOS33;
+
+NET "rx" LOC = T13;
+NET "rx" IOSTANDARD = LVCMOS33;
+
+NET "tx_done" LOC = K12;
+NET "tx_done" IOSTANDARD = LVCMOS33;
+
+NET "baud_rate_sel" LOC = K13;
+NET "baud_rate_sel" IOSTANDARD = LVCMOS33;
+
+NET "bd" LOC = D5;
+NET "bd" IOSTANDARD = LVCMOS33;
+
+NET "tx_start" LOC = M13;
+NET "tx_start" IOSTANDARD = LVCMOS33;

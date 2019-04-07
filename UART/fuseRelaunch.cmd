@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/BEYNARD/Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart_tb_isim_beh.exe" -prj "C:/Users/BEYNARD/Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart_tb_beh.prj" "work.rx_uart_tb" 
+-intstyle "ise" -incremental -o "C:/CPE_USERS/TPelec_4ETI/UART/uart_tb_isim_beh.exe" -prj "C:/CPE_USERS/TPelec_4ETI/UART/uart_tb_beh.prj" "work.uart_tb" 

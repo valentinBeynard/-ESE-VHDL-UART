@@ -1,1 +1,3 @@
-work	"rx_uart.vhd"
+work	"UART.vhd"
+work	"baud_rate_generator.vhd"
+work	"tx_uart.vhd"

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-03-20T17:27:48</DateModified>
+  <DateModified>2019-03-26T15:51:59</DateModified>
   <ModuleName>rx_uart</ModuleName>
   <SummaryTimeStamp>2019-03-20T17:25:10</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/BEYNARD/Documents/GitHub/-ESE-VHDL-UART/UART/iseconfig/rx_uart.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/BEYNARD/Documents/GitHub/-ESE-VHDL-UART/UART</ImplementationReportsDirectory>
+  <SavedFilePath>C:/CPE_USERS/-ESE-VHDL-UART-master/UART/iseconfig/rx_uart.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/CPE_USERS/-ESE-VHDL-UART-master/UART\</ImplementationReportsDirectory>
   <DateInitialized>2019-03-20T14:07:02</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

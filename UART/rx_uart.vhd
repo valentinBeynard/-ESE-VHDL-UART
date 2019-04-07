@@ -45,6 +45,7 @@ signal current_state, next_state : state_machine;
 
 signal internal_dout : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
 signal n : INTEGER range 0 to 7 := 0;
+
 signal s : INTEGER range 0 to 15 := 0;
 begin
 	
@@ -63,10 +64,11 @@ begin
 	-- Process gérant le passage d'un état à l'autre
 	process (s_tick, next_state)
 	
-
+	variable s_int : INTEGER range 0 to 15 := 0;
 	
 	begin
-	
+		s_int := s;
+		
 		case current_state is
 		
 			when  idle => 
@@ -77,15 +79,15 @@ begin
 				end if;
 				
 				rx_done <= '0';
-				s <= 0;
+				s_int := 0;
 				n <= 0;
 
 			when  stop => 
 				if(s_tick = '1') then
-					if(s = 15) then
+					if(s_int = 15) then
 						next_state <= idle;
 					else
-						s <= s + 1;
+						s_int := s_int + 1;
 						next_state <= stop;
 					end if;
 				end if;
@@ -96,15 +98,15 @@ begin
 			when  start =>
 			
 				if(s_tick = '1') then
-					s <= s + 1;
+					s_int := s_int + 1;
 				end if;
 			
 				rx_done <= '0';
 				dout <= internal_dout;
 			
-				if(s < 7) then
+				if(s_int < 7) then
 					if(rx = '1') then
-						s <= 0;
+						s_int := 0;
 						next_state <= idle;
 					else
 						if(s_tick = '0') then
@@ -113,7 +115,7 @@ begin
 					end if;
 				else
 					next_state <= data;
-					s <= 0;
+					s_int := 0;
 				end if;
 				
 
@@ -121,20 +123,20 @@ begin
 			when  data => 
 
 				if(s_tick = '1') then
-					s <= s + 1;
+					s_int := s_int + 1;
 				end if;
 				
 				rx_done <= '0';
 				
 				if(n > 7) then
-					s <= 0;
+					s_int := 0;
 					next_state <= stop;
 				else
 					next_state <= data;
 				end if;
 				
-				if(s >= 15) then
-					s <= 0;
+				if(s_int >= 15) then
+					s_int := 0;
 					internal_dout(n) <= rx;
 					n <= n + 1;
 				end if;
@@ -142,6 +144,8 @@ begin
 			when others => next_state<= idle;
 
 		end case;
+		
+		s <= s_int;
 				
 	end process;
 

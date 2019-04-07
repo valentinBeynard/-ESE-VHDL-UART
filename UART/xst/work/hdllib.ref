@@ -1,2 +1,8 @@
-AR rx_uart behavioral C:/Users/BEYNARD/Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd sub00/vhpl01 1553100335
-EN rx_uart NULL C:/Users/BEYNARD/Documents/GitHub/-ESE-VHDL-UART/UART/rx_uart.vhd sub00/vhpl00 1553100334
+AR baud_rate_generator behavioral C:/CPE_USERS/TPelec_4ETI/UART/baud_rate_generator.vhd sub00/vhpl05 1553704267
+AR uart behavioral C:/CPE_USERS/TPelec_4ETI/UART/UART.vhd sub00/vhpl07 1553704271
+AR rx_uart behavioral C:/CPE_USERS/-ESE-VHDL-UART-master/UART/rx_uart.vhd sub00/vhpl01 1553612366
+EN baud_rate_generator NULL C:/CPE_USERS/TPelec_4ETI/UART/baud_rate_generator.vhd sub00/vhpl04 1553704266
+EN tx_uart NULL C:/CPE_USERS/TPelec_4ETI/UART/tx_uart.vhd sub00/vhpl02 1553704268
+AR tx_uart behavioral C:/CPE_USERS/TPelec_4ETI/UART/tx_uart.vhd sub00/vhpl03 1553704269
+EN rx_uart NULL C:/CPE_USERS/-ESE-VHDL-UART-master/UART/rx_uart.vhd sub00/vhpl00 1553612365
+EN uart NULL C:/CPE_USERS/TPelec_4ETI/UART/UART.vhd sub00/vhpl06 1553704270
